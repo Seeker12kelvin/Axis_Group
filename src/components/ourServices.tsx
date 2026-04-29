@@ -1,11 +1,16 @@
 import Button from './button'
 import stats from '../images/round-services.avif'
 import litStats from '../images/round-lit-services.avif'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import UserContext from './userContext'
 
 const OurServices = () => {
 
   const [image, setImages] = useState(stats)
+
+  const context = useContext(UserContext)
+  if(!context) return 
+  const { sectionRef } = context
 
   const onEnter = () => {
     setImages(litStats)
@@ -16,7 +21,7 @@ const OurServices = () => {
   }
 
   return (
-    <section className='w-full h-fit md:py-30 max-md:py-20 flex max-md:flex-col max-md:gap-10 md:gap-50 items-center justify-center'>
+    <section ref={sectionRef} className='w-full h-fit md:py-30 max-md:py-20 flex max-md:flex-col max-md:gap-10 md:gap-50 items-center justify-center'>
 
       <div className='h-full'>
 

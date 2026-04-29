@@ -5,6 +5,7 @@ import OurServices from '../components/ourServices'
 import OurTeam from '../components/ourTeam'
 import Menu from '../components/menu'
 import UserContext from '../components/userContext'
+import Navbuttons from '../components/navbuttons'
 
 const Landingpage = (): JSX.Element | null | undefined => {
 
@@ -24,6 +25,8 @@ const Landingpage = (): JSX.Element | null | undefined => {
       <OurServices />
 
       <OurTeam />
+
+      <Navbuttons />
 
     </main>
   )

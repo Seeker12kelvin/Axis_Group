@@ -1,9 +1,15 @@
-import { type JSX } from 'react'
+import { useContext, type JSX } from 'react'
 import background from '../images/download1.png'
+import UserContext from './userContext'
 
-const HeroSection = (): JSX.Element => {
+const HeroSection = (): JSX.Element | null | undefined => {
+
+  const context = useContext(UserContext)
+  if(!context) return 
+  const { handleScrolling } = context
+
   return (
-    <section style={{backgroundImage: `url(${background})`}} className='w-full max-md:h-screen md:h-[75vh] md:mt-22 bg-cover bg-fixed'>
+    <section style={{backgroundImage: `url(${background})`}} className='w-full max-md:h-screen md:h-[75vh] md:mt-18 bg-cover bg-fixed'>
 
       {/* <div className='' /> */}
 
@@ -13,7 +19,7 @@ const HeroSection = (): JSX.Element => {
 
         <p className='md:text-3xl max-md:text-lg font-bold'>Financial Consulting. Let Us Do the Math</p>
 
-        <button className='bg-[#C63F60] text-white max-w-50 w-full py-3.5 px-4.5 hover:bg-[#273B7B] transition-all duration-300'>Get Started</button>
+        <button onClick={(): void => handleScrolling()} className='bg-[#C63F60] text-white max-w-50 w-full py-3.5 px-4.5 hover:bg-[#273B7B] transition-all duration-300 cursor-pointer'>Get Started</button>
         
       </div>
 

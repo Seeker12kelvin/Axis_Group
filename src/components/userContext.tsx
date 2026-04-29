@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, type RefObject } from "react";
 
 export interface UserContextType {
   // displayProgress: number
@@ -11,7 +11,9 @@ export interface UserContextType {
   // payUp: (image: string | undefined) => void,
   // contactModal: boolean,
   // setContactModal: React.Dispatch<React.SetStateAction<boolean>>,
-  setMenuBtn: React.Dispatch<React.SetStateAction<boolean>>
+  setMenuBtn: React.Dispatch<React.SetStateAction<boolean>>,
+  sectionRef: RefObject<HTMLElement | null>,
+  handleScrolling: () => void,
   menuBtn: boolean
 }
 
