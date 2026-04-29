@@ -21,13 +21,13 @@ const OurTeam = () => {
   }
 
   return (
-    <section ref={teamSectionRef} className='bg-[#e1e7f73b] w-full h-fit min-[767px]:py-30 min-[767px]:px-10 max-md:py-20 flex max-md:flex-col max-md:gap-10 min-[767px]:gap-50 items-center justify-center'>
+    <section ref={teamSectionRef} className='bg-[#e1e7f73b] w-full h-fit min-[767px]:py-30 min-[767px]:px-10 max-md:py-20 flex max-md:flex-col max-md:gap-10 min-[767px]:gap-30 items-center justify-center'>
 
       <div className='h-full flex flex-col gap-7 max-md:items-center max-md:text-center max-[1000px]:gap-5'>
 
-        <h2 className='uppercase text-4xl font-bold'>Our Team</h2>
+        <h2 className='uppercase text-4xl font-medium'>Our Team</h2>
 
-        <p className='text-lg font-extralight w-full max-md:max-w-70 max-md:text-sm max-[1000px]:text-sm min-[767px]:max-w-110 tracking-widest max-[1000px]:leading-6'>
+        <p className='text-lg font-extralight w-full max-md:max-w-70 max-md:text-sm max-[1000px]:text-sm min-[767px]:max-w-110 tracking-wide max-[1000px]:leading-6'>
           I'm a paragraph. Click here to add your own text and
           edit me. I’m a great place for you to tell a story and let
           your users know a little
