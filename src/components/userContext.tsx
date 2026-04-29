@@ -12,8 +12,10 @@ export interface UserContextType {
   // contactModal: boolean,
   // setContactModal: React.Dispatch<React.SetStateAction<boolean>>,
   setMenuBtn: React.Dispatch<React.SetStateAction<boolean>>,
-  sectionRef: RefObject<HTMLElement | null>,
-  handleScrolling: () => void,
+  serviceSectionRef: RefObject<HTMLElement | null>,
+  teamSectionRef: RefObject<HTMLElement | null>,
+  homeSectionRef: RefObject<HTMLElement | null>,
+  handleScrolling: (index: number) => void,
   menuBtn: boolean
 }
 

@@ -10,7 +10,7 @@ const OurServices = () => {
 
   const context = useContext(UserContext)
   if(!context) return 
-  const { sectionRef } = context
+  const { serviceSectionRef } = context
 
   const onEnter = () => {
     setImages(litStats)
@@ -21,7 +21,7 @@ const OurServices = () => {
   }
 
   return (
-    <section ref={sectionRef} className='w-full h-fit min-[767px]:py-30 min-[767px]:px-10 max-md:py-20 flex max-md:flex-col max-md:gap-10 min-[767px]:gap-50 items-center justify-center'>
+    <section ref={serviceSectionRef} className='w-full h-fit min-[767px]:py-30 min-[767px]:px-10 max-md:py-20 flex max-md:flex-col max-md:gap-10 min-[767px]:gap-50 items-center justify-center'>
 
       <div className='h-full'>
 

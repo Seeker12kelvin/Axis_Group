@@ -14,7 +14,7 @@ const Menu = (): JSX.Element | null | undefined => {
   }, [])
 
   const context = useContext(UserContext)
-  if(!context) return 
+  if(!context) return
   const { setMenuBtn } = context
 
   const handleMenu = (): void => {

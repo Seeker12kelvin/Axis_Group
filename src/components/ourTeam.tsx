@@ -1,11 +1,16 @@
 import Button from './button'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import office from '../images/team-pic.avif'
 import litOffice from '../images/team-lit-pic.avif'
+import UserContext from './userContext'
 
 const OurTeam = () => {
 
   const [image, setImages] = useState(office)
+
+  const context = useContext(UserContext)
+  if(!context) return 
+  const { teamSectionRef } = context
 
   const onEnter = () => {
     setImages(litOffice)
@@ -16,7 +21,7 @@ const OurTeam = () => {
   }
 
   return (
-    <section className='bg-[#e1e7f73b] w-full h-fit min-[767px]:py-30 min-[767px]:px-10 max-md:py-20 flex max-md:flex-col max-md:gap-10 min-[767px]:gap-50 items-center justify-center'>
+    <section ref={teamSectionRef} className='bg-[#e1e7f73b] w-full h-fit min-[767px]:py-30 min-[767px]:px-10 max-md:py-20 flex max-md:flex-col max-md:gap-10 min-[767px]:gap-50 items-center justify-center'>
 
       <div className='h-full flex flex-col gap-7 max-md:items-center max-md:text-center max-[1000px]:gap-5'>
 
