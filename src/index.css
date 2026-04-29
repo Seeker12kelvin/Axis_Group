@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+body html {
+  min-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+}
+
+body{
+  height: 100%;
+  overscroll-behavior: none;
+  font-family: sans-serif;
+}
