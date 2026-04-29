@@ -27,7 +27,7 @@ const Menu = (): JSX.Element | null | undefined => {
   }
 
   return (
-    <aside ref={menuBarRef} className="w-screen h-screen bg-[#e1e7f73b] backdrop-blur-3xl fixed top-0 left-0 z-50 flex flex-col items-center gap-10 p-20">
+    <aside ref={menuBarRef} className="w-screen h-screen bg-[#e1e7f73b] backdrop-blur-3xl fixed top-0 left-0 z-50 flex flex-col items-center gap-10">
       
       <button onClick={(): void =>handleMenu()}>
         <IoCloseSharp size={54} className='cursor-pointer' />
@@ -38,7 +38,7 @@ const Menu = (): JSX.Element | null | undefined => {
         <ul className='w-full h-full flex flex-col gap-7 text-xl items-center tracking-widest'>
           {navbarItems.map((data: string, index: number) => (
             <li key={index}>
-              <a href="#" className={`${index < navbarItems.length - 2 ? 'font-normal' : 'font-normal'} border-b border-gray-50`}>{data}</a>
+              <a href="#" className={`${index < navbarItems.length - 2 ? 'font-normal' : 'font-normal'}`}>{data}</a>
             </li>
           ))}
         </ul>

@@ -15,13 +15,13 @@ const Header = (): JSX.Element | null | undefined => {
   }
 
   return (
-    <header className='flex md:justify-center max-md:justify-around items-center w-full gap-20 md:p-5 max-md:p-5 fixed top-0 bg-white z-10'>
+    <header className='flex min-[1000px]:justify-around max-[1000px]:justify-between items-center w-full gap-20 min-[940px]:p-5 max-[940px]:px-3 max-[940px]:py-5 fixed top-0 bg-white z-10'>
 
-      <p className='text-2xl'>Axis<span style={{color: 'rgba(0, 0, 255, 0.456)'}}>Group</span></p>
+      <p className='text-2xl max-[940px]:w-full'>Axis<span style={{color: 'rgba(0, 0, 255, 0.456)'}}>Group</span></p>
       
-      <nav className='text-sm max-md:hidden'>
+      <nav className='text-sm max-md:hidden max-[940px]:w-full'>
         
-        <ul className='w-full h-full flex gap-7'>
+        <ul className='w-full h-full flex gap-7 max-[940px]:text-xs text-center'>
           {navbarItems.map((data: string, index: number) => (
             <li key={index}>
               <a href="#" className={`${index < navbarItems.length - 2 ? 'font-light' : 'font-semibold'}`}>{data}</a>
@@ -31,8 +31,8 @@ const Header = (): JSX.Element | null | undefined => {
         
       </nav>
 
-      <button onClick={(): void => handleMenu()}>
-        <MdOutlineMenu size={34} className='md:hidden' />
+      <button onClick={(): void => handleMenu()} className='md:hidden'>
+        <MdOutlineMenu size={34} />
       </button>
 
     </header>
